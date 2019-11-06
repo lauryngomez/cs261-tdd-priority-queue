@@ -4,6 +4,15 @@
 
 class Job:
 
-    def __init__(self):
-        self.priority = None
-        self.message = None
+    def __init__(self, priority = None, message = None):
+        self.priority = priority
+        self.message = message
+        
+    def __eq__(self, job):
+        return self.priority == job.priority
+    
+    def __lt__(self, job):
+        return self.priority < job.priority
+    
+    def __gt__(self, job):
+        return self.priority > job.priority

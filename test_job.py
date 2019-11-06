@@ -30,48 +30,48 @@ class TestJob(unittest.TestCase):
         self.assertEqual(None, j.message)
 
 
-    # def test_attributes(self):
-    #     """
-    #     A Job is instantiated with a priority and a message.
-    #     """
-    #     j = Job(23, "Fake message")
-    #     self.assertEqual(23, j.priority)
-    #     self.assertEqual("Fake message", j.message)
+    def test_attributes(self):
+        """
+        A Job is instantiated with a priority and a message.
+        """
+        j = Job(23, "Fake message")
+        self.assertEqual(23, j.priority)
+        self.assertEqual("Fake message", j.message)
 
     """
     Comparisons. A larger priority value indicates a higher priority.
     Hint: Investigate how to override Python comparison operators.
     """
 
-    # def test_eq(self):
-    #     """
-    #     Jobs with equivalent priorities are equal to each other.
-    #     """
-    #     first = Job(1, "Fake message")
-    #     second = Job(1, "Don't care about the message")
-    #     third = Job(3, "Don't care about the message")
-    #     self.assertTrue(first == second)
-    #     self.assertTrue(second == first)
-    #     self.assertFalse(first == third)
-    #     self.assertFalse(second == third)
+    def test_eq(self):
+        """
+        Jobs with equivalent priorities are equal to each other.
+        """
+        first = Job(1, "Fake message")
+        second = Job(1, "Don't care about the message")
+        third = Job(3, "Don't care about the message")
+        self.assertTrue(first == second)
+        self.assertTrue(second == first)
+        self.assertFalse(first == third)
+        self.assertFalse(second == third)
 
-    # def test_lt(self):
-    #     """
-    #     A Job with a smaller priority is 'less than' a job with a larger priority.
-    #     """
-    #     smaller = Job(1, "Fake message")
-    #     larger = Job(10, "Fake message")
-    #     self.assertTrue(smaller < larger)
-    #     self.assertFalse(larger < smaller)
+    def test_lt(self):
+        """
+        A Job with a smaller priority is 'less than' a job with a larger priority.
+        """
+        smaller = Job(1, "Fake message")
+        larger = Job(10, "Fake message")
+        self.assertTrue(smaller < larger)
+        self.assertFalse(larger < smaller)
 
-    # def test_gt(self):
-    #     """
-    #     A Job with a larger priority is 'greater than' a job with a smaller priority.
-    #     """
-    #     larger = Job(10, "Fake message")
-    #     smaller = Job(1, "Fake message")
-    #     self.assertTrue(larger > smaller)
-    #     self.assertFalse(smaller > larger)
+    def test_gt(self):
+        """
+        A Job with a larger priority is 'greater than' a job with a smaller priority.
+        """
+        larger = Job(10, "Fake message")
+        smaller = Job(1, "Fake message")
+        self.assertTrue(larger > smaller)
+        self.assertFalse(smaller > larger)
 
     # def test_le(self):
     #     """
