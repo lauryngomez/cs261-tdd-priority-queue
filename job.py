@@ -16,3 +16,9 @@ class Job:
     
     def __gt__(self, job):
         return self.priority > job.priority
+    
+    def __le__(self, job):
+        return self.priority <= job.priority
+
+    def __repr__(self):
+        return 'Job {0}: {1}'.format(self.priority, self.message)

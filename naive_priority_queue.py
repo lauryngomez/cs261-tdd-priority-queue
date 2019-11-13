@@ -3,5 +3,5 @@
 # YOUR NAME
 
 class NaivePriorityQueue:
-
-    pass
+    def __init__(self, data = None):
+        self.data = data
